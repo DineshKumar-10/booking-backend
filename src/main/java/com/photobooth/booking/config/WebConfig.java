@@ -11,8 +11,11 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins(
+
                         "http://localhost:4200",
-                        "https://booking-frontend.onrender.com"
+                        "https://photo-booth-one-blush.vercel.app"
+
+
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
