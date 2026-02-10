@@ -19,15 +19,10 @@ public class BookingController {
     }
 
     @PostMapping
-//    public Booking createBooking(@RequestBody Booking booking) {
-//        return bookingService.saveBooking(booking);
-//    }
-
-    public Booking createBooking(
-            @Valid @RequestBody BookingRequestDto dto
-    ) {
-        return bookingService.createBooking(dto);
+    public Booking createBooking(@RequestBody Booking booking) {
+        return bookingService.saveBooking(booking);
     }
+
     @GetMapping
     public List<Booking> getAllBookings() {
         return bookingService.getAllBookings();
